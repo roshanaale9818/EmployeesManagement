@@ -26,6 +26,7 @@ namespace WebApplication1
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
             // difference between addDbContextPool and adddbcontext is addDbcontextpool searches for instance before creating
             //if found any it uses that instance not creating another one.
             //we add our adddbcontext class for db contexting
@@ -54,17 +55,23 @@ namespace WebApplication1
                 //defaultFilesOptions
                 app.UseDefaultFiles();
                 app.UseStaticFiles();
-                //app.UseMvcWithDefaultRoute();
-                // app.Use(async (context, next) => { await context.Response.WriteAsync("Middleware is received"); });
-                //endpoints.MapGet("/", async context =>
-         
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller}/{action}/{id?}");
+            });
+            //app.UseMvcWithDefaultRoute();
+            // app.Use(async (context, next) => { await context.Response.WriteAsync("Middleware is received"); });
+            //endpoints.MapGet("/", async context =>
 
-              //  app.Run( async (context)=> {
 
-                    //"Hello World!"
-                   // throw new Exception("SOME EXCEPTIONS");
-                    //await context.Response.WriteAsync(System.Diagnostics.Process.GetCurrentProcess().ProcessName);
-                //});
+            //  app.Run( async (context)=> {
+
+            //"Hello World!"
+            // throw new Exception("SOME EXCEPTIONS");
+            //await context.Response.WriteAsync(System.Diagnostics.Process.GetCurrentProcess().ProcessName);
+            //});
             //});
         }
     }

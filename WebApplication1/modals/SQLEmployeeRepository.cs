@@ -14,7 +14,8 @@ namespace WebApplication1.modals
         }
         public Employee Add(Employee employee)
         {
-            context.Employees.Add(employee);
+            var res= context.Employees.Add(employee);
+            context.SaveChanges();
             return employee;
         }
 

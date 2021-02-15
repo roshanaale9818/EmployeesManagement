@@ -22,17 +22,32 @@ namespace WebApplication1.Controllers
         {
             return _employeeRepository.GetEmployee(1).Name;
         }
+        [Route("details")]
+        [HttpGet]
         public JsonResult Details()
         {
             Employee model = _employeeRepository.GetEmployee(1);
             return Json(model);
           //  return _employeeRepository.GetEmployee(1).Name;
         }
+        [Route("addemployee")]
+        [HttpPost]
+        public string AddEmployee([FromBody] Employee employee)
+        {
+            _employeeRepository.Add(employee);
+            return "OK";
+
+        }
         public ViewResult ShowDetails()
         {
             Employee model = _employeeRepository.GetEmployee(1);
             return View(model);
 
+        }
+        public IEnumerable<Employee> Get()
+        {
+            var data = _employeeRepository.GetAllEmployees();
+            return data;
         }
     }
 }

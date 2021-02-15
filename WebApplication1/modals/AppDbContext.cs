@@ -15,7 +15,7 @@ namespace WebApplication1.modals
         }
         //we use this for querying the database and any operation to database
         public DbSet<Employee> Employees { get; set; }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        /*protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // base.OnModelCreating(modelBuilder);
             //seeding the data to our database with migration
@@ -30,6 +30,6 @@ namespace WebApplication1.modals
                     );
             
 
-        }
+        }*/
     }
 }
