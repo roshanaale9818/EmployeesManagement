@@ -38,16 +38,37 @@ namespace WebApplication1.Controllers
             return "OK";
 
         }
+        [Route("updateemployee")]
+        [HttpPost]
+        public string UpdateEmployee([FromBody] Employee employee)
+        {
+            _employeeRepository.Update(employee);
+            return "OK";
+
+        }
+
         public ViewResult ShowDetails()
         {
             Employee model = _employeeRepository.GetEmployee(1);
             return View(model);
 
         }
+
+        [Route("getAllEmployees")]
+        [HttpGet]
         public IEnumerable<Employee> Get()
         {
             var data = _employeeRepository.GetAllEmployees();
             return data;
+        }
+
+        [Route("delete")]
+        [HttpDelete]
+        public string delete([FromBody] int id)
+        {
+            _employeeRepository.Delete(id);
+            return "Successfully deleted";
+
         }
     }
 }

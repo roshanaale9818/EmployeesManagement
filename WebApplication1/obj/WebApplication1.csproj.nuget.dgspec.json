@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Roshan Aale\\EmployeesManagement\\EmployeesManagement\\WebApplication1\\WebApplication1.csproj": {}
+    "F:\\ASP .net Core\\EmployeesManagement\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "C:\\Roshan Aale\\EmployeesManagement\\EmployeesManagement\\WebApplication1\\WebApplication1.csproj": {
+    "F:\\ASP .net Core\\EmployeesManagement\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Roshan Aale\\EmployeesManagement\\EmployeesManagement\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "F:\\ASP .net Core\\EmployeesManagement\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "C:\\Roshan Aale\\EmployeesManagement\\EmployeesManagement\\WebApplication1\\WebApplication1.csproj",
-        "packagesPath": "C:\\Users\\Amir\\.nuget\\packages\\",
-        "outputPath": "C:\\Roshan Aale\\EmployeesManagement\\EmployeesManagement\\WebApplication1\\obj\\",
+        "projectPath": "F:\\ASP .net Core\\EmployeesManagement\\WebApplication1\\WebApplication1.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "F:\\ASP .net Core\\EmployeesManagement\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Amir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\miken\\projects\\JOBCARD_API_UPGRADED\\pdf package": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -73,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

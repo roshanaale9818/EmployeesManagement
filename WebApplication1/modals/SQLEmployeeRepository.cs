@@ -14,8 +14,8 @@ namespace WebApplication1.modals
         }
         public Employee Add(Employee employee)
         {
-            var res= context.Employees.Add(employee);
-            context.SaveChanges();
+            context.Employees.Add(employee);
+            var res = context.SaveChanges();
             return employee;
         }
 
@@ -44,8 +44,20 @@ namespace WebApplication1.modals
 
         public Employee Update(Employee employeeChanges)
         {
-            var employee = context.Attach(employeeChanges);
-            employee.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+
+
+            /* var entity = db.Users.Attach(updatedUser);
+             entity.Entry(updatedUser).State = EntityState.Modified;
+             entity.SaveChanges();
+             return updatedUser;*/
+            var result = context.Employees.SingleOrDefault(b => b.Id == employeeChanges.Id);
+            if (result != null)
+            {
+                result.Name = employeeChanges.Name;
+                result.Email = employeeChanges.Email;
+                result.Department = employeeChanges.Department;
+                context.SaveChanges();
+            }
             context.SaveChanges();
             return employeeChanges;
         }
